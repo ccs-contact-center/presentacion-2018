@@ -1,0 +1,2283 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Presentacion de Resultados 2018</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+
+		<script src="./assets/js/jquery.js"></script>
+		<script src="./node_modules/chart.js/dist/Chart.min.js"></script>
+		<script src="./assets/js/data-labels.js"></script>
+		<script src="./node_modules\jquery-circle-progress/dist/circle-progress.js"></script>
+
+
+		<script>
+		
+		function redirect(id){
+			window.location = 'Objetivos.html?id=' + id;
+		}
+
+		$(function() {
+
+			Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+				color: '#FFFFFF',
+				anchor: 'center',
+				backgroundColor: 'rgba(0,0,0,0.95)',
+				borderRadius: '10'
+			});
+
+			loaderRRHH()
+			loaderProcesos()
+			loaderImplementacion()
+			loaderComunicacion()
+			loaderOperaciones()
+			loaderCapacitacion()
+			loaderCalidad()
+			loaderComercial()
+			loaderCommand()
+
+		})
+
+
+
+
+		function loaderRRHH() {
+
+			$('#cobPlantilla').circleProgress({
+				value: 0.84,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(84 * progress) + '<i>%</i>');
+			});
+
+			$('#calidadRecluta').circleProgress({
+				value: 0.85,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(85 * progress) + '<i>%</i>');
+			});
+
+			$('#desarrolloOrganzacional').circleProgress({
+				value: .9344,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(93.44 * progress + '<i>%</i>');
+			});		
+
+
+
+			var ctx = document.getElementById("buzonQuejas").getContext('2d');
+					var myChart = new Chart(ctx, {
+						type: 'doughnut',
+						data: {
+							labels: ['Tecnología', 'Salario', 'Esparcimiento', 'Aire Acondicionado', 'Fauna Nociva', 'Tiempo Auxiliares'],
+							datasets: [{
+								data: [10,8,5,2,2,1],
+								backgroundColor: ['rgba(192,3,39)', 'rgba(192,3,39,0.9)', 'rgba(192,3,39,0.8)', 'rgba(192,3,39,0.7)', 'rgba(192,3,39,0.6)', 'rgba(192,3,39,0.5)'],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							legend: {
+								display: false,
+								
+							},
+
+						}
+					});
+
+
+			$('#retencionPersonal').circleProgress({
+				value: .8,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(80 * progress) + '<i>%</i>');
+			});		
+
+			$('#presenciaOperaciones').circleProgress({
+				value: .5,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(50 * progress) + '<i>%</i>');
+			});	
+			
+			$('#relacionesLaborales').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});					
+			
+
+			$('#clienteRRHH').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});		
+
+		}
+
+		function loaderProcesos(){
+
+			$('#normaISO9001').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});
+
+			$('#operacionesISO9001').circleProgress({
+				value: .125,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(12.5 * progress + '<i>%</i>');
+			});		
+
+			$('#auditoresISO9001').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});		
+
+			$('#Hallazgos27000').circleProgress({
+				value: .222,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(22.2 * progress + '<i>%</i>');
+			});		
+			$('#Hallazgos9001').circleProgress({
+				value: .115,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(11.5 * progress + '<i>%</i>');
+			});	
+
+			$('#nuevosProcesos').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(118 * progress + '<i></i>');
+			});	
+
+			$('#auditoriasArea').circleProgress({
+				value: .3,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(30 * progress + '<i>%</i>');
+			});	
+			$('#auditoriasProcesos').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(14 * progress + '<i></i>');
+			});	
+												
+			$('#clienteProcesos').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(0 * progress) + '<i>%</i>');
+			});		
+		}
+
+		function loaderImplementacion(){
+
+			$('#SLAImplementacion').circleProgress({
+				value: .80,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(80 * progress) + '<i>%</i>');
+			});		
+
+			$('#controlCambios').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});	
+			$('#indicadoresProcesos').circleProgress({
+				value: .9,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(90 * progress) + '<i>%</i>');
+			});	
+
+			$('#seguimientoImple').circleProgress({
+				value: .9,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(90 * progress) + '<i>%</i>');
+			});	
+
+			$('#clienteImplementacion').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(0 * progress) + '<i>%</i>');
+			});													
+
+		}
+
+		function loaderComunicacion(){
+
+			$('#presentacionComercial').circleProgress({
+				value: 0.33,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(33 * progress) + '<i>%</i>');
+			});	
+
+			$('#talleres').circleProgress({
+				value: .699,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(69.9 * progress + '<i>%</i>');
+			});	
+
+			$('#identidadCorporativa').circleProgress({
+				value: 0.5,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(50 * progress) + '<i>%</i>');
+			});	
+
+			$('#bienvenidaComunicacion').circleProgress({
+				value: .93,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(93 * progress) + '<i>%</i>');
+			});		
+
+			$('#clienteComunicacion').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(0 * progress) + '<i>%</i>');
+			});													
+		}
+
+		function loaderOperaciones(){
+		
+			$('#OPFacturacion').circleProgress({
+				value: .93,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(93 * progress) + '<i>%</i>');
+			});			
+		
+			$('#rotacionOP').circleProgress({
+				value: .8,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(80 * progress) + '<i>%</i>');
+			});	
+
+			$('#ausentismoOP').circleProgress({
+				value: 0.925,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(92.5 * progress + '<i>%</i>');
+			});	
+
+			$('#cursoSupervisoresOP').circleProgress({
+				value: .88,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(88 * progress) + '<i>%</i>');
+			});	
+
+			$('#vipOP').circleProgress({
+				value: .87,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(87 * progress) + '<i>%</i>');
+			});		
+
+			$('#coberturaVIP').circleProgress({
+				value: .07,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(7 * progress) + '<i>%</i>');
+			});		
+
+			$('#rotacionVIP').circleProgress({
+				value: .93,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(93 * progress) + '<i>%</i>');
+			});				
+
+			$('#bonosStandard').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100* progress) + '<i>%</i>');
+			});	
+			
+			$('#clienteOP').circleProgress({
+				value: .25,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(25 * progress) + '<i>%</i>');
+			});				
+		
+		}
+				
+		function loaderCapacitacion(){
+		
+			$('#CAPRotacionenaula').circleProgress({
+				value: .8315,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(83.15 * progress + '<i>%</i>');
+			});	
+
+			$('#CAPRotacionfueraaula').circleProgress({
+				value: 0.76,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(76 * progress + '<i>%</i>');
+			});	
+
+			$('#CAPHabilidades').circleProgress({
+				value: .57,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(57 * progress) + '<i>%</i>');
+			});	
+
+			$('#CAPPaperless').circleProgress({
+				value: .98,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(98 * progress) + '<i>%</i>');
+			});		
+
+			$('#CAPCertificaciones').circleProgress({
+				value: .5,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(50* progress) + '<i>%</i>');
+			});	
+			
+			$('#CAPHoras').circleProgress({
+				value: .98,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(70905 * progress + '<i></i>');
+			});				
+
+			$('#CAPElearning').circleProgress({
+				value: .212,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(21.2 * progress + '<i>%</i>');
+			});	
+			
+			$('#CAPCliente').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(0 * progress + '<i>%</i>');
+			});				
+		
+		}
+		
+		function loaderCalidad(){
+		
+			$('#QADias').circleProgress({
+				value: .89,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(89 * progress + '<i>%</i>');
+			});	
+
+			$('#QAMetodologia').circleProgress({
+				value: .75,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(75 * progress + '<i>%</i>');
+			});	
+
+			$('#QAAnalisis').circleProgress({
+				value: .80,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(80 * progress) + '<i>%</i>');
+			});	
+
+			$('#QAAplicativo').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(0 * progress) + '<i>%</i>');
+			});		
+
+			$('#QACrecimiento').circleProgress({
+				value: .266,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(26.6* progress + '<i>%</i>');
+			});	
+			
+			$('#QACliente').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(0 * progress) + '<i>%</i>');
+			});				
+		
+		}		
+
+		function loaderComercial(){
+		
+			$('#licitacionesCOM').circleProgress({
+				value: 1.25,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(125 * progress) + '<i>%</i>');
+			});	
+
+			$('#estacionesCOM').circleProgress({
+				value: .153,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(15.3 * progress + '<i>%</i>');
+			});	
+
+			$('#citasCOM').circleProgress({
+				value: .75,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(75 * progress) + '<i>%</i>');
+			});	
+
+			$('#contratosCOM').circleProgress({
+				value: .20,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(20 * progress) + '<i>%</i>');
+			});		
+
+			$('#unidadesCOM').circleProgress({
+				value: .5,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(50* progress) + '<i>%</i>');
+			});	
+			
+			$('#pagoCOM').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(0 * progress) + '<i>%</i>');
+			});				
+		
+		}		
+	
+		function loaderCommand(){
+	
+
+			$('#CCDesarrollosNuevos').circleProgress({
+				value: .9,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(33 * progress) + '<i></i>');
+			});	
+			
+			$('#CCRotacion').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});	
+
+			$('#CCAutomatizacion').circleProgress({
+				value: .482,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(48 * progress) + '<i>%</i>');
+			});	
+
+			$('#CCAnalisis').circleProgress({
+				value: .8,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(80 * progress) + '<i>%</i>');
+			});	
+
+			$('#CCCapacitacionInterna').circleProgress({
+				value: .60,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(60 * progress) + '<i>%</i>');
+			});		
+
+			$('#CCPlataforma').circleProgress({
+				value: .950,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(91 * progress) + '<i></i>');
+			});
+
+			$('#CCISO2700').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100* progress) + '<i>%</i>');
+			});	
+			
+			$('#CCSG').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});		
+			
+			$('#CCPaperless').circleProgress({
+				value: .38,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(38 * progress) + '<i>%</i>');
+			});		
+			
+			$('#CCSolicitudes').circleProgress({
+				value: .94,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(94 * progress) + '<i>%</i>');
+			});	
+			
+			$('#CCMejoras').circleProgress({
+				value: .9986,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(99.86* progress + '<i>%</i>');
+			});	
+			
+			$('#CCBonos').circleProgress({
+				value: 1,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
+			});		
+			
+			$('#CCAplicacion').circleProgress({
+				value: .75,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(75 * progress) + '<i>%</i>');
+			});		
+			
+			$('#CCClientes').circleProgress({
+				value: 0,
+				fill: '#C00327',
+				size: 160
+			}).on('circle-animation-progress', function(event, progress) {
+				$(this).find('strong').html(Math.round(0 * progress) + '<i>%</i>');
+			});			
+		}		
+		
+		function AusentismoOP() {
+
+			var ctx = document.getElementById("OPAusentismo").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ['2017', '2018', '2019'],
+					datasets: [{
+						data: [9.86, 7.50, 6.0],
+						backgroundColor: ['rgba(192,3,39)', 'rgba(192,3,39)', 'rgba(192,3,39)'],
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							display: false,
+							ticks: {
+								suggestedMin: 0,
+								suggestedMax: 10
+							}
+						}]
+					},
+					legend: {
+						display: false,
+
+					},
+
+				}
+			});
+
+		}
+
+		function RotacionOP() {
+
+			var ctx = document.getElementById("OPRotacion").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ['2017', '2018', '2019'],
+					datasets: [{
+						data: [15.44, 20, 12],
+						backgroundColor: ['rgba(192,3,39)', 'rgba(192,3,39)', 'rgba(192,3,39)'],
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							display: false,
+							ticks: {
+								suggestedMin: 0,
+								suggestedMax: 10
+							}
+						}]
+					},
+					legend: {
+						display: false,
+
+					},
+
+				}
+			});
+
+		}
+
+		function FacturacionOP() {
+
+			var ctx = document.getElementById("OPFacturacion").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ['2017', '2018', '2019'],
+					datasets: [{
+						data: [83.30, 98, 100],
+						backgroundColor: ['rgba(192,3,39)', 'rgba(192,3,39)', 'rgba(192,3,39)'],
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							display: false,
+							ticks: {
+								suggestedMin: 0,
+								suggestedMax: 10
+							}
+						}]
+					},
+					legend: {
+						display: false,
+
+					},
+
+				}
+			});
+
+		}
+
+		function AdherenciaOP() {
+
+			var ctx = document.getElementById("OPAdherencia").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ['2017', '2018', '2019'],
+					datasets: [{
+						data: [86, 93, 98],
+						backgroundColor: ['rgba(192,3,39)', 'rgba(192,3,39)', 'rgba(192,3,39)'],
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							display: false,
+							ticks: {
+								suggestedMin: 0,
+								suggestedMax: 10
+							}
+						}]
+					},
+					legend: {
+						display: false,
+
+					},
+
+				}
+			});
+
+		}
+		
+		</script>
+		
+
+		
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							
+							<img src="./images/logo.png" width="85%" style="margin-top:30%;"></img>
+							
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>PRESENTACION ANUAL 2018-2019</h1>
+								<!--<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
+								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>-->
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#Comercial" onClick="loaderComercial()">Comercial</a></li>
+								<li><a href="#Implementacion" onClick="loaderImplementacion()">Implementación</a></li>
+								<li><a href="#RRHH" onClick="loaderRRHH()">RRHH</a></li>
+								<li><a href="#Capacitacion" onClick="loaderCapacitacion()">Capacitacion</a></li>
+								<li><a href="#Comunicacion" onClick="loaderComunicacion()">Comunicacion</a></li>
+								<li><a href="#Operaciones" onClick="loaderOperaciones()">Operaciones</a></li>
+								<li><a href="#TI" onClick="loaderCommand()">TI y CC</a></li>
+								<li><a href="#QA" onClick="loaderCalidad()">QA</a></li>
+								<li><a href="#Procesos" onClick="loaderProcesos()">Procesos</a></li>
+							</ul>
+						</nav>
+					</header>
+				<!-- Main -->
+					<div id="main">
+						<!-- RRHH -->
+							<article id="RRHH">
+								<h2 class="major">Recursos Humanos</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt=""/></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Cobertura de Vacantes</h3>
+										<p>La cobertura durante 2018 fue del 84% vs Objetivo de 110%</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="cobPlantilla"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="calidadRecluta"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Calidad de la Recluta</h3>
+										<p>El promedio de calidad de la recluta fue de 85%, 10 PP por debajo del objetivo</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Desarrollo Organizacional</h3>
+										<p>Se generó y comenzó a ejecutar nustro Plan de Desarrollo Organizacional, cubriendo el 93.44% del personal administrativo (57 colaboradores)</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="desarrolloOrganzacional"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<canvas id="buzonQuejas"></canvas>
+										<!--<div class="circle" id="buzonQuejas"><strong></strong></div>-->
+									</div>
+									
+									<div class="column">
+										<h3>Buzón de Quejas y Sugerencias</h3>
+										<p>Durante 2018 se recibieron 28 quejas/sugerencias; el 35.7% de las quejas son de Tecnología (Equipos de computo en mal estado, principalmente)</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Retención</h3>
+										<p>En 2018 se alcanza un 80% de retención vs un 92% de objetivo</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="retencionPersonal"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="presenciaOperaciones"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Kardex</h3>
+										<p>Se crea Kardex a nivel agente, se realiza seguimiento personalizado.</p>
+										
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Relaciones Laborales</h3>
+										<p>Durante 2018 se dan 691 bajas; no se recibe ninguna demanda y se firman 4 convenios. Existen 10 demandas en curso de años anteriores</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="relacionesLaborales"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+
+									
+									<div class="graph">
+										<div class="circle" id="clienteRRHH"><strong></strong></div>
+									</div>
+									<div class="column">
+										<h3>Clientes para CCS</h3>
+										<p>Steren</p>
+									</div>
+								</div>		
+
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(1)">Objetivos 2019</button>
+								</br>		
+								</div>	
+
+								</article>
+						<!-- TI -->
+							<article id="TI">
+								<h2 class="major">Command Center</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Analistas Multiskill</h3>
+										<p>Se rota a los analistas entre servicios, de esta manera, todos son capaces de atender todos los servicios</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CCRotacion"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CCAutomatizacion"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Automatizacion</h3>
+										<p>El 48.2% de los reportes elaborados, se encuentran ahora automatizados (81 reportes),el restante 51.8% corresponde a reportes no automatizables </p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Analisis</h3>
+										<p>La profundidad de los analisis enviados se incremente y estandariza, enviando en el semaforo diario por campaña, sugerencias y alertas de acuerdo a las areas de oportunidad</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CCAnalisis"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CCCapacitacionInterna"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Capacitación Interna</h3>
+										<p>Se capacita al 60% de la plantilla en Programacion con VB para aplicaciones (Macros) y TSQL (Consulta a BDD)</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+
+									
+									<div class="column">
+										<h3>Reportes en Plataforma</h3>
+										<p>Se generan 91 reportes nuevos para la plataforma de reportes (Autoservicio) </p>
+									</div>
+									<div class="graph">
+										<div class="circle" id="CCPlataforma"><strong></strong></div>
+									</div>								
+								</div>
+								<br/>
+								<br/>								
+								<h2 class="major">TI y Desarrollo</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+									<div class="row">
+									<div class="graph">
+										<div class="circle" id="CCDesarrollosNuevos"><strong></strong></div>
+									</div>						
+								
+									<div class="column">
+										<h3>Desarrollos Nuevos</h3>
+										<p>Se desarrollan 33 aplicativos o modulos nuevos</p>
+									</div>
+									
+
+								
+								</div>
+								<br/>
+								<br/>							
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>ISO 27000</h3>
+										<p>El cumplimiento de los procesos se logra al 100% en diciembre</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CCISO2700"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CCSG"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Sistema de Gestión de Tickets</h3>
+										<p>Se elabora un sistema propio de gestión de solicitudes internas, iniciando su operacion en octubre 2018</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Migración Paperless</h3>
+										<p>83 de 218 procesos en las areas, ahora no utilizan papel (38%)</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CCPaperless"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CCSolicitudes"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Solicitudes a TKM</h3>
+										<p>El 94% de solicitudes a través de TI(216 tickets), siendo de esta manera virtualmente el unico enlace de solicitud</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Disponibilidad del Servicio</h3>
+										<p>A lo largo del año se implementan distintas tecnologías nuevas para mejorar la eficiencia y disponibilidad de los desarrollos operativos; la tasa de error es del .14%</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CCMejoras"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CCBonos"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Esquemas de Bonos</h3>
+										<p>Se estandarizan los esquemas de bonos, se eliminan esquemas de excepción, pasando de 44 a 29 esquemas distintos (34.1% menos)</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>App CCS</h3>
+										<p>El desarrollo se encuentra a un 75% de avance</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CCAplicacion"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CCClientes"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Clientes para CCS</h3>
+										<p>No se refieren clientes para CCS en 2018</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(2)">Objetivos 2019</button>
+								</br>		
+								</div>
+
+							</article>
+						<!-- Procesos -->
+							<article id="Procesos">
+								<h2 class="major">Procesos</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Transición Norma ISO 9001:2015</h3>
+										<p>Se realiza de manera satisfactoria la migración y actualización a la norma ISO 9001:2015 desde ISO 9001:2008</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="normaISO9001"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="operacionesISO9001"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Certificación a RRHH ISO 9001:2015</h3>
+										<p>Se certifica Recursos Humanos en la norma ISO 9001:2015, reportando 1 de 8 procesos</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Certificacion de Auditores</h3>
+										<p>Se certifica al personal del área como auditores internos en ISO 9001:2015</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="auditoresISO9001"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="Hallazgos27000"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Hallazgos 27001</h3>
+										<p>Se detectan 6 hallazgos en la auditoría 27001, de 27 puntos declarados (22.2%), corregidos para poder certificarse.</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Hallazgos 9001</h3>
+										<p>Se detectan 3 hallazgos en la auditoría 9001, de 26 puntos declarados (11.5%), corregidos para poder certificarse.</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="Hallazgos9001"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="nuevosProcesos"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Nuevos Procesos</h3>
+										<p>Se mapean 118 nuevos procesos, pasando de 100 a 218 procesos mapeados </p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Auditorías por Area</h3>
+										<p>Se audita a Operaciones, Capacitación y Calidad (30% de las Areas)</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="auditoriasArea"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="auditoriasProcesos"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Auditorías por Procesos</h3>
+										<p>Se auditan permanentemente los siguientes procesos:</p>
+										<ul>
+											<li>Operaciones</li>
+											<li>Capacitación</li>
+											<li>Calidad</li>
+											<li>Implementación</li>
+											<li>Asistencia</li>
+											<li>Puntualidad</li>
+											<li>Preshift</li>
+											<li>Checklist NI</li>
+											<li>Retroalimentaciones QA</li>
+											<li>Retroalimentaciones Operaciones</li>
+											<li>Calidad de la Recluta</li>
+											<li>Entregas NI Capacitacion-Operaciones</li>
+											<li>5's y Seguridad de la Información</li>
+											<li>Riesgos Campañas TDC</li>
+										</ul>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Clientes para CCS</h3>
+										<p>No se refieren clientes para CCS en 2018</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="clienteProcesos"><strong></strong></div>
+									</div>
+								
+								</div>
+															
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(3)">Objetivos 2019</button>
+								</br>		
+								</div>
+							</article>
+							
+						<!-- Operaciones -->
+							<article id="Operaciones">
+								<h2 class="major">Operaciones</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="OPFacturacion"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Facturación</h3>
+										<p>La facturación global fue del 93%</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Retención</h3>
+										<p>La retención en 2018 alcanza el 80% vs un objetivo de 91% </p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="rotacionOP"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="ausentismoOP"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Presentismo</h3>
+										<p>El presentismo durante 2018 fue de 92.5% vs objetivo del 94%</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<h4>Ranking Retención y Presentismo</h4>
+										<table style="width: 100%">
+											<tr>
+											    <th>Campaña</th>
+											    <th>Retención</th> 
+											    <th>Presentismo</th>
+											  </tr>
+											  <tr>
+											    <td>Multiproyecytos ATC</td>
+											    <td>80.9%</td> 
+											    <td>91.3%</td>
+											  </tr>
+											  <tr>
+											    <td>Multiproyectos Ventas</td>
+											    <td>79.0%</td> 
+											    <td>87.7%</td>
+											</tr>
+											  <tr>
+											    <td>OXXO</td>
+											    <td>79.9%</td> 
+											    <td>90.5%</td>
+											</tr>
+											  <tr>
+											    <td>Televía</td>
+											    <td>91.9%</td> 
+											    <td>89.5%</td>
+											</tr>
+											  <tr>
+											    <td>Vips</td>
+											    <td>94.7%</td> 
+											    <td>95.3%</td>
+											</tr>
+											  <tr>
+											    <td>Dominos</td>
+											    <td>87.1%</td> 
+											    <td>86.6%</td>
+											</tr>
+
+										</table>								
+
+								
+								</div>
+								<br/>
+								<br/>								
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Retención de Supervisores</h3>
+										<p>La retención anual de supervisores fue del 88%, el detalle mensual es el siguiente:</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="cursoSupervisoresOP"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+										<table style="width: 100%">
+											<tr>
+											    <th>Mes</th>
+											    <th>Activos</th> 
+											    <th>Bajas</th>
+											    <th>Retención</th>
+											  </tr>
+											  <tr>
+											    <td>Enero</td>
+											    <td>14</td> 
+											    <td>0</td>
+											    <td>100%</td>
+											  </tr>
+											  <tr>
+											    <td>Febrero</td>
+											    <td>14</td> 
+											    <td>0</td>
+											    <td>100%</td>
+											</tr>
+											  <tr>
+											    <td>Marzo</td>
+											    <td>13</td> 
+											    <td>2</td>
+											    <td>86%</td>
+											</tr>
+											  <tr>
+											    <td>Abril</td>
+											    <td>13</td> 
+											    <td>1</td>
+											    <td>92%</td>
+											</tr>
+											  <tr>
+											    <td>Mayo</td>
+											    <td>13</td> 
+											    <td>2</td>
+											    <td>85%</td>
+											</tr>
+											  <tr>
+											    <td>Junio</td>
+											    <td>14</td> 
+											    <td>0</td>
+											    <td>100%</td>
+											</tr>
+											  <tr>
+											    <td>Julio</td>
+											    <td>15</td> 
+											    <td>1</td>
+											    <td>93%</td>
+											  </tr>
+											  <tr>
+											    <td>Agosto</td>
+											    <td>15</td> 
+											    <td>0</td>
+											    <td>100%</td>
+											</tr>
+											  <tr>
+											    <td>Septiembre</td>
+											    <td>15</td> 
+											    <td>2</td>
+											    <td>87%</td>
+											</tr>
+											  <tr>
+											    <td>Octubre</td>
+											    <td>16</td> 
+											    <td>0</td>
+											    <td>100%</td>
+											</tr>
+											  <tr>
+											    <td>Noviembre</td>
+											    <td>18</td> 
+											    <td>2</td>
+											    <td>87%</td>
+											</tr>
+											  <tr>
+											    <td>Diciembre</td>
+											    <td>15</td> 
+											    <td>2</td>
+											    <td>89%</td>
+											</tr>																													
+										</table>
+									
+
+								
+								</div>
+								</br>
+								</br>
+								
+								<div class="row">
+								
+								
+									<div style="width: 100%">
+										<h3>Retención por Supervisor</h3>
+										<p></p>
+									</div>
+								
+								
+								</div>
+
+								<div class="row">
+									
+										<table style="width: 100%">
+											<tr>
+											    <th>Supervisor</th>
+											    <th>Retención Anual</th>
+											   
+											 </tr>
+											 <tr>
+											    <td>LOPEZ GALINDO ALEJANDRA</td>
+											    <td>90.4%</td> 
+											</tr>
+											  <tr>
+											    <td>ALMAZAN CALLEJAS OSCAR URIEL</td>
+											    <td>88.5%</td> 
+											</tr>
+											  <tr>
+											    <td>CRUZ  RODRIGUEZ  FABRICIO ALONSO</td>
+											    <td>87.7%</td> 
+											</tr>	
+											  <tr>									
+											<tr>
+											    <td>GARCIA JIMENEZ HUGO </td>
+											    <td>87.8%</td> 
+											</tr>
+											  <tr>
+											    <td>TREJO CALDERON JOSE ANTONIO</td>
+											    <td>86.7%</td> 
+											</tr>	
+											  <tr>
+											    <td>GONZALEZ RAMIREZ MIGUEL ANGEL</td>
+											    <td>85.1.3%</td>   
+											</tr>
+											  <tr>
+											    <td>GUTIERREZ MELENDEZ ATHZIRI</td>
+											    <td>85.0%</td> 
+											</tr>													  
+											  <tr>
+											    <td>MIRANDA MARTINEZ MARTHA PATRICIA</td>
+											    <td>84.9%</td> 
+											
+											  </tr>
+
+											  <tr>
+											    <td>AGUILAR CAMAS ISRAEL</td>
+											    <td>81.0%</td> 		 
+											</tr>
+
+
+
+
+
+
+																											
+										</table>
+									
+
+								
+								</div>
+								
+								<br/>
+								<br/>
+
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="vipOP"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Plantilla VIP</h3>
+										<p>Se cubren 32,574 horas de 37,586 objetivo (87%)</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Cobertura VIP</h3>
+										<p>7% de las horas deficit se cubren con agentes VIP vs un 10% de objetivo</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="coberturaVIP"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+				
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="rotacionVIP"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Retención VIP</h3>
+										<p>La retención anual de la plantilla VIP es del 93%</p>
+									</div>
+								
+								</div>
+							
+								<br/>
+								<br/>								
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Bonos Estandarizados</h3>
+										<p>Se estandarizan los bonos y ponderaciones para todas las campañas</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="bonosStandard"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+
+						
+								<div class="row">
+								
+								
+									<div style="width: 100%">
+										<h3>Rotación de Campañas</h3>
+									</div>
+								
+								
+								</div>
+							
+								<div class="row">
+
+
+										<table style="width: 100%">
+											<tr>
+											    <th>Campaña</th>
+											    <th>Fortalezas</th> 
+											    <th>Debilidades</th>
+											  </tr>
+											  <tr>
+											    <td>Interjet</td>
+											    <td>
+													<ul>
+														<li>Incremento en conversión</li>
+														<li>Seguimiento con el cliente</li>
+														<li>Aplicativo Outbound Personalizado</li>
+													</ul>
+												</td> 
+											    <td>
+													<ul>
+														<li>Rotación del personal</li>
+														<li>Difusión de vacantes </li>
+														<li>Falta del desvío de llamadas de in</li>
+													</ul>												
+												</td>
+											  </tr>
+											  <tr>
+											    <td>BanRegio</td>
+											    <td>
+													<ul>
+														<li>Se mantiene conversión por arriba del objetivo (>.24)</li>
+														<li>Seguimiento con el cliente </li>
+														<li>Aplicativo para administración de citas</li>
+													</ul>
+												</td> 
+											    <td>
+													<ul>
+														<li>Rotación del  personal</li>
+														<li>3 meses sin el cumplimiento de la meta de citas derivado de la falta de personal</li>
+														<li>Curvas de aprendizaje largas</li>
+													</ul>												
+												</td>
+											</tr>
+											  <tr>
+											    <td>Casas ARA</td>
+											    <td>
+													<ul>
+														<li>Incremento en conversión</li>
+														<li>Seguimiento con el cliente</li>
+														<li>Enfoque en ventas y cumplimiento</li>
+														<li>Aplicativos Personalizados</li>
+														
+													</ul>
+												</td> 
+											    <td>
+													<ul>
+														<li>Rotación del personal</li>
+														<li>Tardanza en la recluta</li>
+														<li>Falta de Staff (Calidad)</li>
+														<li>Temperatura Aire Acondicionado</li>
+														<li>Cobertura de Vacantes</li>
+													</ul>												
+												</td>
+											</tr>
+											  <tr>
+											    <td>Wobi</td>
+											    <td>
+													<ul>
+														<li>Cobertura Express de Personal</li>
+													</ul>
+												</td> 
+											    <td>
+													<ul>
+														<li>Implementación del proyecto</li>
+														<li>Definición del objetivo</li>
+														<li>Ejecución de la actividad</li>
+													</ul>												
+												</td>
+											</tr>
+											  <tr>
+											    <td>Cykadas</td>
+											    <td>
+													<ul>
+														
+														<li>Cumplimiento de staff</li>
+														<li>Plan de dinamicas</li>
+													</ul>
+												</td> 
+											    <td>
+													<ul>
+														<li>Evaluación del producto que venderíamos </li>
+														<li>Objetivo inicial a cumplir</li>
+														<li>Implementación (URL's de Pago)</li>
+														<li>Perfil del personal</li>
+													</ul>												
+												</td>
+											</tr>
+												
+										</table>
+									
+
+								
+								</div>
+								</br>
+								</br>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="clienteOP"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Clientes para CCS</h3>
+										<p>Cumplido (Edenred)</p>
+									</div>
+								
+								</div>
+							
+
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(4)">Objetivos 2019</button>
+								</br>		
+								</div>							
+							</article>
+						<!-- Implementacion -->
+							<article id="Implementacion">
+								<h2 class="major">Implementacion</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Tiempo de Implementacion</h3>
+										<p>El 80% de los proyectos se implementan en tiempo y forma en 2018</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="SLAImplementacion"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="controlCambios"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Control de Cambios</h3>
+										<p>En el 100% de los proyectos se implemtenta Control de Cambios</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Indicadores</h3>
+										<p>Establecer y generar indicadores de rendimiento a nivel portafolio de proyectos y de manera individual.</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="indicadoresProcesos"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+
+									
+									<div class="graph">
+										<div class="circle" id="clienteImplementacion"><strong></strong></div>
+									</div>
+													<div class="column">
+										<h3>Clientes para CCS</h3>
+										<p>No se refieren clientes para CCS en 2018</p>
+									</div>				
+								</div>
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(5)">Objetivos 2019</button>
+								</br>		
+								</div>																
+							</article>
+						<!-- Comunicacion -->
+							<article id="Comunicacion">
+								<h2 class="major">Comunicación</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Presentacion Comercial</h3>
+										<p>Se estandariza el formato de la presentación comercial, se establecen las politicas de cambios (Pendiente Traduccion y Video Corporativo)</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="presentacionComercial"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph" >
+										<div class="circle" id="talleres"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Talleres</h3>
+										<p>Se retoman e implementan los talleres de Excel, el Cineclub, Lectura Virtual en Intranets y Uñas Gelish en Ludoteca con un alcance del 69.9%, 20.1 PP Por debajo del objetivo</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Identidad Corporativa</h3>
+										<p>Se desarrolla el Manual de Identidad Corporativa e Imagen Empresarial CCS</p>
+									</div>
+									
+									<div class="graph" >
+										<div class="circle" id="identidadCorporativa"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph" >
+										<div class="circle" id="bienvenidaComunicacion"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Avance Plan de Comunicacion</h3>
+										<p>El avance global fue de 93%, 7 PP por debajo del objetivo</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Cliente CCS</h3>
+										<p>No se refieren clientes para CCS en 2018</p>
+									</div>
+									
+									<div class="graph" >
+										<div class="circle" id="clienteComunicacion"><strong></strong></div>
+									</div>
+								
+								</div>
+
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(6)">Objetivos 2019</button>
+								</br>		
+								</div>
+
+							</article>
+						<!-- Comercial -->
+							<article id="Comercial">
+								<h2 class="major">Comercial</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Licitaciones</h3>
+										<p>Se participa en 15 licitaciones vs 12 que se tenian de objetivo; se ganan 11 (73.3%).</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="licitacionesCOM"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="estacionesCOM"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Estaciones</h3>
+										<p>69 estaciones de servicios nuevos y por crecimiento vs 450 objetivo (15.3% de alcance)</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Citas</h3>
+										<p>Se realizan 9 citas mensuales vs 12 proyectadas (75%)</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="citasCOM" ><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="contratosCOM"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Contratos</h3>
+										<p>Se firman 12 nuevos contratos en el año vs 5 mensuales (60 anuales), teniendo un alcance del 20%</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Unidades de Negocio</h3>
+										<p>Se difundirán las 6 unidades de negocio de CCS en 2019 </br> Durante 2018 se tocan tres: Outsourcing,  Consultoría (propiedades.com) y Co-sourcing (Steren)</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="unidadesCOM"><strong></strong></div>
+									</div>
+								
+								</div>
+
+
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(7)">Objetivos 2019</button>
+								</br>		
+								</div>								
+							</article>	
+						<!-- Capacitacion -->
+							<article id="Capacitacion">
+								<h2 class="major">Capacitacion</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Retención en Aula</h3>
+										<p>El resultado en 2018 fue de 83.15%, 7.85 PP por debajo del objetivo (91%)</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CAPRotacionenaula"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CAPRotacionfueraaula"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Retención fuera de Aula</h3>
+										<p>La retención fuera de aula en 2018 alcanzó un 76%, 17.5% PP por debajo del objetivo</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Habilidades Operativas</h3>
+										<p>El cumplimiento de HO incrementó hasta un 57%, con la aplicación de las nuevas tecnologías</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CAPHabilidades"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CAPPaperless"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Paperless</h3>
+										<p>El 98% de las actividades en capacitación ahora son paperless</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Certificaciones</h3>
+										<p>Se inicia el tramite de certificacion ante la STPS</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CAPCertificaciones"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CAPHoras"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Horas</h3>
+										<p>Se dan 70,905 horas de capacitación, entre nuevo ingreso (48,946), Campañas Secundarias (9,078) y Habilidades Operativas (12,881)</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>E Learning y Microlearning</h3>
+										<p>A partir de septiembre se implementa la plataforma de e-learning, acumulando 594 horas impartidas en esta modalidad, representando el 21.2% del tiempo de HO en este periodo</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="CAPElearning"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="CAPCliente"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Cliente para CCS</h3>
+										<p>No se refieren clientes para CCS en 2018</p>
+									</div>
+								
+								</div>
+			
+
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(8)">Objetivos 2019</button>
+								</br>		
+								</div>								
+							</article>
+						<!-- QA -->
+							<article id="QA">
+								<h2 class="major">Calidad</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Dias de Monitoreo y Retroalimentación</h3>
+										<p>EL alcance en 2018 fue de 89%, 1% por debajo del objetivo </p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="QADias"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="QAMetodologia"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Metodología</h3>
+										<p>La ejecución de la metodología se ejecuta al 75%, estandarizando los procesos entre servicios</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Analisis</h3>
+										<p>Se entregan analisis de AHT, Tipificación y Gestión, incrementandose la profundidad del análisis</p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="QAAnalisis"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="QAAplicativo"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Aplicativo Calidad</h3>
+										<p>Se iniciará el desarrollo de la segunda fase de aplicativo de calidad en febrero 2019</p>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+								
+								
+									<div class="column">
+										<h3>Rotación Interna</h3>
+										<p>La rotación interna es del 26.6%, aquivalente a 4 bajas (3 analistas y un analista JR) </p>
+									</div>
+									
+									<div class="graph">
+										<div class="circle" id="QACrecimiento"><strong></strong></div>
+									</div>
+								
+								</div>
+								<br/>
+								<br/>
+								<div class="row">
+									
+									<div class="graph">
+										<div class="circle" id="QACliente"><strong></strong></div>
+									</div>
+									
+									<div class="column">
+										<h3>Cliente para CCS</h3>
+										<p>No se refieren clientes para CCS en 2018</p>
+									</div>
+								
+								</div>
+
+								
+								<div style="text-align: center;">
+								</br>
+								</br>
+								</br>
+									<button onclick="redirect(9)">Objetivos 2019</button>
+								</br>		
+								</div>
+								
+	
+							</article>							
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Isaac Contreras 2018.</p>
+					</footer>
+			</div>
+		<!-- BG -->
+			<div id="bg"></div>
+		<!-- Scripts -->
+
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

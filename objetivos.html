@@ -1,0 +1,724 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Presentacion de Resultados 2018</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+		<script src="./assets/js/jquery.js"></script>
+		<script src="./node_modules/chart.js/dist/Chart.min.js"></script>
+		<script src="./assets/js/data-labels.js"></script>
+		<script src="./node_modules\jquery-circle-progress/dist/circle-progress.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+		<script>
+		
+		
+		
+		
+		$(function() {
+
+			Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+				color: '#FFFFFF',
+				anchor: 'center',
+				backgroundColor: 'rgba(0,0,0,0.95)',
+				borderRadius: '10'
+			});
+			
+			loaderGraficas();
+
+			var url_string = window.location.href
+			var url = new URL(url_string);
+			var id = url.searchParams.get("id");
+			
+			
+			$("#contenedorPrincipal > div").each(function(){
+			
+				var counter = $(this).attr('id')
+
+				if (counter != id) {
+
+					 $(this).css('display', 'none');
+				} else {
+					 $(this).css('display', 'inherit');
+
+				}
+				
+
+			});
+
+		AOS.init({
+
+				  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+				  offset: 0, // offset (in px) from the original trigger point
+				  delay: 0, // values from 0 to 3000, with step 50ms
+				  duration: 750, // values from 0 to 3000, with step 50ms
+				  easing: 'ease-in-quad', // default easing for AOS animations
+				  once: false, // whether animation should happen only once - while scrolling down
+				  mirror: true, // whether elements should animate out while scrolling past them
+				  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+				});
+
+
+		})
+
+function loaderGraficas(){
+		
+					var ctx = document.getElementById("grafica1").getContext('2d');
+					var myChart = new Chart(ctx, {
+						type: 'pie',
+						data: {
+							labels: ['Confirmado', 'Por Confirmar', 'Sin Confirmar'],
+							datasets: [{
+								data: [36,70,34],
+								backgroundColor: ['rgba(143,205,78,0.9)', 'rgba(251,251,0,0.9)', 'rgba(192,3,39,0.8)'],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							legend: {
+								display: false,
+								
+							},
+
+						}
+					});
+					
+					
+					var ctx = document.getElementById("grafica2").getContext('2d');
+					var myChart = new Chart(ctx, {
+						type: 'line',
+						data: {
+							labels: ['Enero', 'Febrero', 'Marzo','Abril', 'Mayo', 'Junio','Julio', 'Agosto', 'Septiembre','Octubre', 'Noviembre', 'Diciembre'],
+							datasets: [{
+								data: [288775,871965,1335772,2134043,2366002,2449038,2449038,2620925,2620925,2839368,3226248,3254640],
+								backgroundColor: 'rgba(192,3,39,0.3)',
+								borderColor: 'rgba(192,3,39)',
+							}]
+						},
+						options: {
+							legend: {
+								display: false,
+								
+							},
+							 plugins: {
+            // Change options for ALL labels of THIS CHART
+            datalabels: {
+                display:false
+            }
+        }
+
+						}
+					});
+					
+					
+		
+		}
+		
+		</script>
+		
+
+		
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+		<header class="hero">
+			<div class="hero-center">
+				<img src="./images/logo.png" width="35%"></img>
+				<h2 class="hero__text"data-aos-easing="ease" data-aos-delay="400">Objetivos 2019</h2>
+			</div>
+			<span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+				<br>
+				<i class="chevron bottom"></i>
+			</span>
+
+		</header>
+
+
+
+
+<div id="contenedorPrincipal">
+
+		<div id="1">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Recursos Humanos</h2>
+				<div class="code code--small" data-aos="zoom-in">
+				
+					<pre> <img src="./images/check.gif" width="30%"></img><code> Cobertura de plantillas al 110%, incluyendo sobrestaff</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>95% en calidad de la recluta</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>100% de cobertura de Desarrollo Organizacional</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>90% mínimo en evaluación de Instructor de DO</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>SLA 1 semana para respuesta a quejas y sugerencias por campaña </code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>91% de retención de personal</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:20px;">Contratación de adultos mayores por medio de alianzas con Fundación del 
+Centro Historico, Abriendo Espacios y 
+Fundación Vidas Activas en adultos mayores A. C.  </code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Plan de Referidos</code></pre>
+				</div>		
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Prefiltro de Candidatos por medio de app Talkpush y 
+desarrollo de app interna</code></pre>
+				</div>	
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Buzon Digital Anonimo de Sugerencias</code></pre>
+				</div>	
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Presencia en operaciones por medio de "RRHH Te Escucha" </code></pre>
+				</div>	
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Contratación de empresas externas para apoyo en reclutamiento </code></pre>
+				</div>					
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>90% de seguimiento a los hallazgos detectados en Kardex de RRHH</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Mantener &lt;1% de demandas sobre bajas de personal</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Sistema de Evaluacion a personal administrativo</code></pre>
+				</div>				
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>1 cliente para CCS</code></pre>
+				</div>												
+			</div>
+		</section>
+		</div>	
+
+		<div id="2">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">TI y Command Center</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html">Finalizar la automatización de reportes en excel</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Incrementar la profundidad en los analisis entregados</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Finalizar la capacitación de analistas en VB, SQL y Macros en Junio 2019</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Entrega Mensual de resultados (Assessment)</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>85% de los procesos en CCS serán paperless</code></pre>
+				</div>		
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Lanzamiento APP CCS
+31 de enero (Primera Fase) y 31 de Mayo (Segunda Fase)</code></pre>
+				</div>
+
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Mantener la disponibilidad de los servicios por arriba del 99%</code></pre>
+				</div>						
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Desarrollo de Funnel Commercial. Levantamiento 15 de Enero 2019</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Dashboard para las todas las campañas de CCS
+Levantamiento 15 de Enero 2019</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>App para Track de reclutamiento en Septiembre 2019</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Segunda Fase SG</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Version 2.0 Aplicativo CCS</code></pre>
+				</div>		
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Estandarizar ACD entre servicios, integrando Omnicanalidad</code></pre>
+				</div>				
+			</div>
+		</section>
+		</div>		
+
+		<div id="3">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Procesos</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html">Certificación PCI</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Máximo 3 hallazgos en certificación 27001</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Máximo 1 hallazgo en certificación 9001</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Al menos 2 auditorías internas</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Documentar nuevos desarrollos</code></pre>
+				</div>				
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>1 Cliente para CCS</code></pre>
+				</div>
+				
+			</div>
+		</section>
+		</div>
+
+		<div id="4">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Operaciones</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html" style="padding-top:40px;">Disminuir Rotación al 9% y el ausentismo al 6% por medio de
+Dinamicas Mensuales, Programa VIP y el Desarrollo de Supervisores</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Se incrementará la adherencia a dimensionamientos al 98%</code></pre>
+				</div>
+				<div class="code code--small" >
+									<div style="width: 100%">
+										<h3>Crecimiento Estimado</h3>
+										<p>El crecimiento de los servicios durante 2019 será de 140 estaciones, distribuidas de la siguiente manera:</p>
+									</div>
+									
+							<div class="row">
+									
+									<div class="graph">
+										<canvas id="grafica1"></canvas>
+										<!--<div class="circle" id="buzonQuejas"><strong></strong></div>-->
+									</div>
+									
+									<div class="graph">
+										<canvas id="grafica2"></canvas>
+										<!--<div class="circle" id="buzonQuejas"><strong></strong></div>-->
+									</div>
+								
+								</div>
+								
+									<pre>
+									<table style="width: 100%">
+											<tr>
+											    <th>Campaña</th>
+												<th>Estaciones</th> 
+												<th>% Crecimiento</th> 
+											    <th>Total</th> 
+											    <th>Confirmado</th>
+											    <th>Por Confirmar</th>
+											    <th>Sin Confirmar</th>
+											  </tr>
+											  <tr>
+											    <td>Vips</td>
+												<td>13</td>
+												<td>123%</td>
+											    <td>16</td> 
+											    <td>14</td>
+											    <td>0</td>
+											    <td>2</td>
+											  </tr>
+											  <tr>
+											    <td>Dominos</td>
+												<td>13</td>
+												<td>46%</td>
+											    <td>6</td> 
+											    <td>2</td>
+											    <td>0</td>
+											    <td>4</td>
+											</tr>
+											  <tr>
+											    <td>GPI</td>
+												<td>2</td>
+												<td>400%</td>
+											    <td>8</td> 
+											    <td>0</td>
+											    <td>4</td>
+											    <td>4</td>
+											</tr>
+											  <tr>
+											    <td>Steren</td>
+												<td>3</td>
+												<td>133%</td>
+											    <td>4</td> 
+											    <td>0</td>
+											    <td>0</td>
+											    <td>4</td>
+											</tr>
+											  <tr>
+											    <td>TCL</td>
+												<td>2</td>
+												<td>300%</td>
+											    <td>6</td> 
+											    <td>2</td>
+											    <td>0</td>
+											    <td>4</td>
+											</tr>
+											  <tr>
+											    <td>Edenred</td>
+												<td>4</td>
+												<td>300%</td>
+											    <td>12</td> 
+											    <td>0</td>
+											    <td>6</td>
+											    <td>6</td>
+											</tr>
+											  <tr>
+											    <td>Harmon Hall</td>
+												<td>5</td>
+												<td>560%</td>
+											    <td>28</td> 
+											    <td>6</td>
+											    <td>22</td>
+											    <td>0</td>
+											  </tr>
+											  <tr>
+											    <td>Price Shoes</td>
+												<td>12</td>
+												<td>58%</td>
+											    <td>7</td> 
+											    <td>0</td>
+											    <td>7</td>
+											    <td>0</td>
+											</tr>
+											  <tr>
+											    <td>Vicky Form</td>
+												<td>1</td>
+												<td>700%</td>
+											    <td>7</td> 
+											    <td>0</td>
+											    <td>5</td>
+											    <td>2</td>
+											</tr>
+											  <tr>
+											    <td>A3P</td>
+												<td>1</td>
+												<td>600%</td>
+											    <td>6</td> 
+											    <td>0</td>
+											    <td>5</td>
+											    <td>1</td>
+											</tr>
+											  <tr>
+											    <td>Mens Fashion</td>
+												<td>1</td>
+												<td>600%</td>
+											    <td>6</td> 
+											    <td>0</td>
+											    <td>5</td>
+											    <td>1</td>
+											</tr>
+											  <tr>
+											    <td>Televisa</td>
+												<td>12</td>
+												<td>92%</td>
+											    <td>11</td> 
+											    <td>0</td>
+											    <td>5</td>
+											    <td>6</td>
+											</tr>
+											  <tr>
+											    <td>OXXO</td>
+												<td>41</td>
+												<td>29%</td>
+											    <td>12</td> 
+											    <td>12</td>
+											    <td>0</td>
+											    <td>0</td>
+											</tr>
+											  <tr>
+											    <td>Soriana</td>
+												<td>11</td>
+												<td>55%</td>
+											    <td>6</td> 
+											    <td>0</td>
+											    <td>6</td>
+											    <td>0</td>
+											</tr>
+											  <tr>
+											    <td>Ganamexico</td>
+												<td>3</td>
+												<td>100%</td>
+											    <td>3</td> 
+											    <td>0</td>
+											    <td>3</td>
+											    <td>0</td>
+											</tr>
+											  <tr>
+											    <td>Castrol</td>
+												<td>1</td>
+												<td>200%</td>
+											    <td>2</td> 
+											    <td>0</td>
+											    <td>2</td>
+											    <td>0</td>
+											</tr>	
+											
+										</table>
+										</br>
+										</br>
+										</br>
+										</br>
+										</pre>
+
+				</div>
+
+
+				<div " data-aos="zoom-in" >
+															</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+										</br>
+				</div>
+				
+				<div class="code code--small" data-aos="zoom-in" >
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Incrementar 110% las cuentas internas por medio de 
+nuevas soluciones a los clientes</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Incrementar de 2 a 8 los supervisores en nivel Plus</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Se facturarán el 100% de las horas</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Optimización de estaciones, agentes y recursos 
+materiales en un 12.5%</code></pre>
+				</div>				
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>4 Clientes para CCS</code></pre>
+				</div>
+				
+			</div>
+		</section>
+		</div>		
+
+		<div id="5">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Implementacion</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html" style="padding-top:40px;">Implementación del 95% de servicios y productos tecnológicos en 
+tiempo y forma</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Seguimiento a la Implementación del 90% en tiempo y forma</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Cambio de plataforma Project Plan por Monday e implementación a 
+todas las áreas en Junio 2018</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>1 Cliente para CCS</code></pre>
+				</div>
+				
+			</div>
+		</section>
+		</div>		
+
+		<div id="6">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Comunicacion</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html" style="padding-top:40px;">Se traducirá al inglés la presentación comercial y se 
+presentará el video corporativo</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>A partir de febrero se publicará un blog con las actividades del area</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:20px;">Contribuir a la retención del personal por medio del la difusión de la 
+Universidad CCS, viviendo el crecimiento y formación continua 
+(95% de retención)</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Cobertura del plan de comunicacion al 100%</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Implementación de Nueva Imagen Corporativa en Operaciones</code></pre>
+				</div>				
+				
+			</div>
+		</section>
+		</div>			
+
+		<div id="7">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Comercial</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html">500 Estaciones al cierre de 2019</code></pre>
+				</div>				
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html">13 Leads Mensuales en Gooogle</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>10 Leads Mensuales de OUT/IN</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Leads de IMT 1 trimestral</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Leads alianzas 1 trimestral</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Tres oportunidades (CV Directo/Interjet/Ilusión)</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Alianzas</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html" style="padding-top:40px;">Crecimiento esperado de 140 WS 
+(26% confirmado, 50% por confirmar y 34% sin confirmar)</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Clientes caídos y prospectos rechazados</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in" >
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Remodelación un avance por Imagen (Bimestral)
+Tecnología (Trimestral) y Layout (Bimestral)</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Seguimiento BPO´s:
+Cumplimiento de KPI's Mensuales, Indicadores de Crecimiento y Cobranza</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Encuesta Trimestral de Satisfacción a Clientes</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">Cocktail/reunión con clientes anual (demos de nuevas TI)
+Anual apartir de junio</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">2 clientes Co-Sourcing, 4 clientes Consultoría 
+5 clientes Capacitación, 2 clientes Calidad </code></pre>
+				</div>								
+			</div>
+		</section>
+		</div>
+
+		<div id="8">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Capacitacion</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html">La retención en aula sera al menos del 91%</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Fuera de aula, la retención sera mayor al 93.5%</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>La aplicación de Habilidades Operativas sera del al menos 90%</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>El 100% de los procesos del area serán paperless</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Se finalizará la certificación ante la STPS</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>La retención de la Universidad CCS, será del 90%</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code style="padding-top:40px;">El 50% de las horas de Habilidades Operativas, serán 
+a través de microlearning</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>42% de capacitación campañas a través de E-learning en Abril 2019</code></pre>
+				</div>				
+			</div>
+		</section>
+		</div>	
+
+		<div id="9">
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title">Calidad</h2>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code class="html" style="padding-top:40px;">90% mínimo en días de monitoreo y de 95% en 
+alcance de cuota de monitoreo y retro</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>90% Calidad global</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Máximo 20% Agentes en nivel C</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Implementar 2ª etapa del aplicativo de calidad máximo el 5 de Abril</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>Guías, rubros y criterios para omnicanalidad</code></pre>
+				</div>
+				<div class="code code--small" data-aos="zoom-in">
+					<pre><img src="./images/check.gif" width="30%"></img><code>1 cliente para CCS</code></pre>
+				</div>
+
+			</div>
+		</section>
+		</div>		
+
+
+</div>						
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="logo">
+						<a href="index.html">
+						<img src="./images/home_icon.png" width="5%" style="border: #fff solid 1px; padding:10px; border-radius: 100%"></img>
+						</a>
+					</div>
+					</br>
+						<p class="copyright">&copy; Isaac Contreras 2018.</p>
+					</footer>
+			</div>
+		<!-- BG -->
+			<div id="bg"></div>
+		<!-- Scripts -->
+
+			<script>
+	 			 AOS.init({
+
+						  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+						  offset: 0, // offset (in px) from the original trigger point
+						  delay: 0, // values from 0 to 3000, with step 50ms
+						  duration: 750, // values from 0 to 3000, with step 50ms
+						  easing: 'ease-in-quad', // default easing for AOS animations
+						  once: false, // whether animation should happen only once - while scrolling down
+						  mirror: true, // whether elements should animate out while scrolling past them
+						  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+						});
+			</script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
